@@ -1,0 +1,99 @@
+{
+    "id": "com.rohitchouhan.sap.imagewidget",
+    "version": "1.0.0",
+    "name": "Image Widget",
+    "description": "The Image Widget is a custom widget that allows you to display an image from a URL in your SAP application.",
+    "newInstancePrefix": "ImageWidget",
+    "vendor": "Rohit Chouhan",
+    "eula": "",
+    "license": "MIT",
+    "icon": "https:\/\/raw.githubusercontent.com\/SAP-Custom-Widget\/ImageWidget\/main\/icon.png",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-rohitchouhan-sap-imagewidget",
+            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/ImageWidget\/ImageWidget.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        },
+        {
+            "kind": "builder",
+            "tag": "com-rohitchouhan-sap-imagewidget-builder",
+            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/ImageWidget\/ImageWidget_Builder.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "src": {
+            "description": "Image URL",
+            "type": "string",
+            "default": ""
+        },
+        "width": {
+            "description": "Image Width",
+            "type": "integer",
+            "default": 150
+        },
+        "height": {
+            "description": "Image Height",
+            "type": "integer",
+            "default": 150
+        }
+    },
+    "methods": {
+        "setSrc": {
+            "description": "Set Image URL",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "string",
+                    "description": "Image URL"
+                }
+            ],
+            "body": "this.src = src;"
+        },
+        "getSrc": {
+            "returnType": "string",
+            "description": "Return Image URL",
+            "body": "return this.src;"
+        },
+        "setWidth": {
+            "description": "Set Image Width",
+            "parameters": [
+                {
+                    "name": "width",
+                    "type": "integer",
+                    "description": "Image Width"
+                }
+            ],
+            "body": "this.width = width;"
+        },
+        "getWidth": {
+            "returnType": "integer",
+            "description": "Return Image Width",
+            "body": "return this.width;"
+        },
+        "setHeight": {
+            "description": "Set Image Height",
+            "parameters": [
+                {
+                    "name": "height",
+                    "type": "integer",
+                    "description": "Image Height"
+                }
+            ],
+            "body": "this.height = height;"
+        },
+        "getHeight": {
+            "returnType": "integer",
+            "description": "Return Image Height",
+            "body": "return this.height;"
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "User Clicked."
+        }
+    }
+}
