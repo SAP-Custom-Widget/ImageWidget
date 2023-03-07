@@ -12,14 +12,14 @@
         {
             "kind": "main",
             "tag": "com-rohitchouhan-sap-imagewidget",
-            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/ImageWidget\/ImageWidget.js",
+            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/ImageWidget@1.0.0\/ImageWidget.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
         {
             "kind": "builder",
             "tag": "com-rohitchouhan-sap-imagewidget-builder",
-            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/ImageWidget\/ImageWidget_Builder.js",
+            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/ImageWidget@1.0.0\/ImageWidget_Builder.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
