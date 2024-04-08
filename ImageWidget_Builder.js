@@ -1,7 +1,6 @@
-
 (function() {
-let template = document.createElement("template");
-template.innerHTML = `
+    let template = document.createElement("template");
+    template.innerHTML = `
 <br>
 <style>
     #form {
@@ -82,54 +81,56 @@ template.innerHTML = `
     <p>Developed by <a target="_blank" href="https://linkedin.com/in/itsrohitchouhan">Rohit Chouhan</a></p>
 </form>
 `;
-class ImageWidgetBuilderPanel extends HTMLElement {
-constructor() {
-super();
-this._shadowRoot = this.attachShadow({
-mode: "open"
-});
-this._shadowRoot.appendChild(template.content.cloneNode(true));
-this._shadowRoot
-.getElementById("form")
-.addEventListener("submit", this._submit.bind(this));
-}
-_submit(e) {
-e.preventDefault();
-this.dispatchEvent(
-new CustomEvent("propertiesChanged", {
-detail: {
-properties: {
-src: this.src,width: this.width,height: this.height
-},
-},
-})
-);
-}
+    class ImageWidgetBuilderPanel extends HTMLElement {
+        constructor() {
+            super();
+            this._shadowRoot = this.attachShadow({
+                mode: "open"
+            });
+            this._shadowRoot.appendChild(template.content.cloneNode(true));
+            this._shadowRoot
+                .getElementById("form")
+                .addEventListener("submit", this._submit.bind(this));
+        }
+        _submit(e) {
+            e.preventDefault();
+            this.dispatchEvent(
+                new CustomEvent("propertiesChanged", {
+                    detail: {
+                        properties: {
+                            src: this.src,
+                            width: this.width,
+                            height: this.height
+                        },
+                    },
+                })
+            );
+        }
 
-set src(_src) {
+        set src(_src) {
             this._shadowRoot.getElementById("builder_src").value = _src;
         }
         get src() {
             return this._shadowRoot.getElementById("builder_src").value;
         }
-        
+
         set width(_width) {
             this._shadowRoot.getElementById("builder_width").value = _width;
         }
         get width() {
             return this._shadowRoot.getElementById("builder_width").value;
         }
-        
+
         set height(_height) {
             this._shadowRoot.getElementById("builder_height").value = _height;
         }
         get height() {
             return this._shadowRoot.getElementById("builder_height").value;
         }
-        
-        }
-customElements.define(
-"com-rohitchouhan-sap-imagewidget-builder",
-ImageWidgetBuilderPanel
-);
+
+    }
+    customElements.define(
+        "com-rohitchouhan-sap-imagewidget-builder",
+        ImageWidgetBuilderPanel
+    );
 })();
